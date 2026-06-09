@@ -1,0 +1,15 @@
+/* CONFIGURAÇÕES GLOBAIS */
+@import url("/css/base/tokens.css");
+@import url("/css/base/reset.css");
+
+/* ESTRUTURA DOS LAYOUTS */
+@import url("/css/layouts/main-page.css");
+@import url("/css/layouts/success-page.css");
+
+/* COMPONENTES REUTILIZÁVEIS */
+@import url("/css/components/button.css");
+@import url("/css/components/text-input.css");
+@import url("/css/components/modal.css");
+
+/* CLASSES UTILITÁRIAS */
+@import url("/css/utilities.css");
