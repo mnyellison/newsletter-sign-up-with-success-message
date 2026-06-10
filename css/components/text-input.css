@@ -33,6 +33,10 @@
   color: var(--color-grey);
 }
 
+.input-group input:hover {
+  border-color: var(--color-blue-800);
+}
+
 .input-group input:focus {
   border-color: var(--color-blue-800);
 }
