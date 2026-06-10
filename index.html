@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Newsletter sign-up form with success message</title>
+    <title>Sign up for our Newsletter | Stay Updated</title>
 
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="/assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="/css/styles.css" />
 
@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- PÁGINA PRINCIPAL -->
-    <main class="card hidden">
+    <main class="card">
       <div class="card-image">
         <picture>
           <source
@@ -29,12 +29,16 @@
             media="(min-width: 768px)"
             srcset="/assets/images/illustration-sign-up-tablet.svg"
           />
-          <img src="/assets/images/illustration-sign-up-mobile.svg" alt="" />
+          <img
+            src="/assets/images/illustration-sign-up-mobile.svg"
+            alt=""
+            aria-hidden="true"
+          />
         </picture>
       </div>
 
-      <div class="card-info">
-        <h1>Stay updated!</h1>
+      <div class="card-info" aria-labelledby="form-heading">
+        <h1 id="form-heading">Stay updated!</h1>
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
         <ul>
           <li>Product discovery and building what matters</li>
@@ -42,20 +46,24 @@
           <li>And much more!</li>
         </ul>
 
-        <form action="" id="card-form">
+        <form action="" id="card-form" novalidate>
           <div class="input-group">
             <div class="label-error">
               <label for="email">Email address</label>
-              <span class="hidden">Valid email required</span>
+              <span class="hidden" id="email-error" aria-live="polite"
+                >Valid email required</span
+              >
             </div>
             <input
               type="email"
               name="email"
               id="email"
               placeholder="email@company.com"
+              required
+              aria-describedby="email-error"
             />
           </div>
-          <button class="button" id="button-submit">
+          <button type="submit" class="button" id="button-submit">
             Subscribe to monthly newsletter
           </button>
         </form>
@@ -63,21 +71,32 @@
     </main>
 
     <!-- MODAL DE SUCESSO -->
-    <article class="modal-success active">
+    <div
+      class="modal-success hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-heading"
+    >
       <div class="modal-message">
         <div class="modal-image">
-          <img src="/assets/images/icon-success.svg" alt="" />
+          <img
+            src="/assets/images/icon-success.svg"
+            alt="Success"
+            aria-hidden="true"
+          />
         </div>
 
-        <h2>Thanks for subscribing!</h2>
+        <h1 id="modal-heading">Thanks for subscribing!</h1>
         <p>
           A confirmation email has been sent to
-          <strong>ash@loremcompany.com</strong>. Please open it and click the
-          button inside to confirm your subscription.
+          <strong id="confirmed-email">ash@loremcompany.com</strong>. Please
+          open it and click the button inside to confirm your subscription.
         </p>
       </div>
 
-      <button class="button" id="button-dismiss">Dismiss message</button>
-    </article>
+      <button type="button" class="button" id="button-dismiss">
+        Dismiss message
+      </button>
+    </div>
   </body>
 </html>

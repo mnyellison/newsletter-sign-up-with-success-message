@@ -5,7 +5,6 @@
 
 /* ESTRUTURA DOS LAYOUTS */
 @import url("/css/layouts/main-page.css");
-@import url("/css/layouts/modal-success.css");
 
 /* COMPONENTES REUTILIZÁVEIS */
 @import url("/css/components/button.css");

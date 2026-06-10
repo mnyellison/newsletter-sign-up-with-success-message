@@ -12,6 +12,7 @@
   min-height: 3.3125rem;
   cursor: pointer;
   overflow: hidden;
+  width: 100%;
 }
 
 /* CRIANDO A CAMADA DO GRADIENTE ESCONDIDA */

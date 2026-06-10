@@ -1,7 +1,7 @@
 body {
   font-family: var(--font-body);
   font-size: var(--text-preset-2);
-  font-size: var(--font-weight-regular);
+  font-weight: var(--font-weight-regular);
   background-color: var(--color-blue-700);
   color: var(--color-blue-800);
   display: flex;
@@ -14,19 +14,15 @@ body {
 .card {
   background-color: var(--color-white);
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-500);
   padding-bottom: 2.75rem;
 }
 
-.card-image {
-  min-width: 100%;
-}
-
 .card-image img {
   width: 100%;
+  display: block; /* remove espaçamentos invisíveis abaixo da imagem */
 }
 
 .card-info {
@@ -35,7 +31,6 @@ body {
 
 .card-info h1 {
   font-size: var(--text-preset-1-mobile);
-  font-weight: var(--font-weight-bold);
   line-height: 1;
   margin-bottom: var(--spacing-300);
 }
@@ -49,6 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-100);
+  list-style: none;
   margin-bottom: var(--spacing-500);
 }
 
@@ -56,17 +52,15 @@ body {
   display: flex;
   align-items: flex-start;
   gap: var(--spacing-200);
-  list-style: none;
   line-height: 1.5;
 }
 
 .card-info li::before {
   content: "";
+  flex-shrink: 0; /* garante que o ícone não amasse se o texto for longo */
   min-width: 1.3125rem;
   min-height: 1.3125rem;
-  background-image: url("/assets/images/icon-success.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
+  background: url("/assets/images/icon-success.svg") no-repeat center / contain;
 }
 
 #card-form {
@@ -79,7 +73,6 @@ body {
 @media (min-width: 768px) {
   .card {
     max-width: 608px;
-    max-height: 878px;
     border-radius: 2.25rem;
     padding: var(--spacing-500);
     box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.25);

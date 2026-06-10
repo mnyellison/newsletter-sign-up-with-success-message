@@ -2,33 +2,29 @@
   /* CORES */
   --color-white: #ffffff;
   --color-grey: #949494;
-
   --color-blue-800: #242742;
   --color-blue-700: #36384d;
-
   --color-red: #ff6155;
-
+  --color-red-bg: #ffe7e6;
   --hover-gradient: linear-gradient(to right, #ff6a3a, #ff527b);
 
   /* TIPOGRAFIA */
   --font-body: "Roboto", sans-serif;
-
   --font-weight-bold: 700;
   --font-weight-regular: 400;
+  --text-preset-1: 3.5rem;
+  --text-preset-1-mobile: 2.5rem;
+  --text-preset-2: 1rem;
+  --text-preset-3: 0.75rem;
 
-  --text-preset-1: 3.5rem; /* 56px */
-  --text-preset-1-mobile: 2.5rem; /* 40px */
-  --text-preset-2: 1rem; /* 16px */
-  --text-preset-3: 0.75rem; /* 12px */
-
-  /* ESPAÇAMENTO */
-  --spacing-100: 0.5rem; /* 8px */
-  --spacing-200: 1rem; /* 16px */
-  --spacing-300: 1.5rem; /* 24px */
-  --spacing-400: 2rem; /* 32px */
-  --spacing-500: 2.5rem; /* 40px */
-  --spacing-600: 3rem; /* 48px */
-  --spacing-800: 4rem; /* 64px */
-  --spacing-900: 4.5rem; /* 72px */
-  --spacing-1300: 6.5rem; /* 104px */
+  /* ESPAÇAMENTOS */
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-800: 4rem;
+  --spacing-900: 4.5rem;
+  --spacing-1300: 6.5rem;
 }
