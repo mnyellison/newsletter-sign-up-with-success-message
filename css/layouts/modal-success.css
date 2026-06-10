@@ -4,7 +4,6 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: var(--spacing-1300) var(--spacing-300) var(--spacing-900)
     var(--spacing-300);
 }
@@ -27,4 +26,27 @@
 
 .modal-success .button {
   width: 100%;
+  margin-top: auto;
+}
+
+/* RESPONSIVIDADE (TABLET) */
+@media (min-width: 768px) {
+  .modal-success.active {
+    max-width: 504px;
+    max-height: 540px;
+    border-radius: 2.25rem;
+    padding: var(--spacing-800);
+  }
+
+  .modal-message {
+    gap: var(--spacing-400);
+  }
+
+  .modal-message h2 {
+    font-size: var(--text-preset-1);
+  }
+
+  .modal-success .button {
+    margin-top: var(--spacing-400);
+  }
 }
