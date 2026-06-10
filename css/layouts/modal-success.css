@@ -1,0 +1,30 @@
+.modal-success.active {
+  background-color: var(--color-white);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--spacing-1300) var(--spacing-300) var(--spacing-900)
+    var(--spacing-300);
+}
+
+.modal-message {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+}
+
+.modal-message h2 {
+  font-size: var(--text-preset-1-mobile);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+}
+
+.modal-message p {
+  line-height: 1.5;
+}
+
+.modal-success .button {
+  width: 100%;
+}

@@ -46,7 +46,7 @@
           <div class="input-group">
             <div class="label-error">
               <label for="email">Email address</label>
-              <span>Valid email required</span>
+              <span class="hidden">Valid email required</span>
             </div>
             <input
               type="email"
@@ -54,16 +54,16 @@
               id="email"
               placeholder="email@company.com"
             />
-            <button class="button" id="button-submit">
-              Subscribe to monthly newsletter
-            </button>
           </div>
+          <button class="button" id="button-submit">
+            Subscribe to monthly newsletter
+          </button>
         </form>
       </div>
     </main>
 
     <!-- MODAL DE SUCESSO -->
-    <article class="modal-success">
+    <article class="modal-success hidden">
       <div class="modal-message">
         <div class="modal-image">
           <img src="/assets/images/icon-success.svg" alt="" />
@@ -72,8 +72,8 @@
         <h2>Thanks for subscribing!</h2>
         <p>
           A confirmation email has been sent to
-          <span>ash@loremcompany.com</span>. Please open it and click the button
-          inside to confirm your subscription.
+          <strong>ash@loremcompany.com</strong>. Please open it and click the
+          button inside to confirm your subscription.
         </p>
       </div>
 
