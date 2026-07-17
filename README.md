@@ -1,64 +1,50 @@
-# Frontend Mentor - Newsletter sign-up form with success message solution
+# Frontend Mentor - Solução de Formulário de Inscrição de Newsletter com Mensagem de Sucesso (Newsletter Sign-Up)
 
-This is a solution to the [Newsletter sign-up form with success message challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+Esta é a minha solução para o desafio "Newsletter sign-up form with success message" do Frontend Mentor. Os desafios do Frontend Mentor ajudam você a aprimorar suas habilidades de codificação construindo projetos realistas.
 
-## Table of contents
+## Visão Geral
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
+### O Desafio
 
-## Overview
+Os usuários devem ser capazes de:
+- Adicionar seu e-mail e enviar o formulário.
+- Visualizar uma mensagem de sucesso contendo o e-mail cadastrado após o envio correto do formulário.
+- Visualizar mensagens de erro e validação caso:
+  - O campo de e-mail seja deixado em branco.
+  - O endereço de e-mail inserido não esteja no formato correto.
+- Visualizar o layout ideal para a interface dependendo do tamanho da tela do seu dispositivo (responsividade completa).
+- Ver estados de hover (passar o mouse) e foco em todos os elementos interativos da página.
 
-### The challenge
-
-Users should be able to:
-
-- Add their email and submit the form
-- See a success message with their email after successfully submitting the form
-- See form validation messages if:
-  - The field is left empty
-  - The email address is not formatted correctly
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
-
-### Screenshot
+### Captura de Tela
 
 ![](/assets/images/screenshot.jpg)
 
 ### Links
 
-- Solution URL: [GitHub Repository](https://github.com/mnyellison/newsletter-sign-up-with-success-message)
-- Live Site URL: [Vercel Deploy](https://newsletter-sign-up-phi.vercel.app/)
+- **Código no GitHub:** [Visualizar Repositório](https://github.com/mnyellison/newsletter-sign-up)
+- **Site Online (Live Preview):** [Acessar Projeto](https://newsletter-sign-up-phi.vercel.app/)
 
 ---
 
-## My process
+## Meu Processo
 
-### Built with
+### Tecnologias Utilizadas
 
-- Semantic HTML5 markup
-- CSS Custom Properties (Variables)
+- HTML5 Semântico
+- Variáveis CSS (Custom Properties)
 - Flexbox
-- Mobile-first workflow
-- Vanilla JavaScript (DOM Manipulation & Events)
+- Fluxo de desenvolvimento Mobile-first
+- Vanilla JavaScript (Manipulação de DOM e eventos)
 
 ---
 
-### What I learned
+### O que eu aprendi neste projeto
 
-During this project, I improved my architectural CSS skills, responsive design practices, and JavaScript logic separation.
+Durante este projeto, aprimorei minhas habilidades em arquitetura de CSS, práticas de design responsivo e separação de lógica no JavaScript.
 
-1. **Responsive Text & Image Cover**: I learned how to handle layout shifting between horizontal and vertical layouts for mobile/desktop interfaces. Using `object-fit: cover` ensured the card image adapted perfectly to changes without losing aspect ratio.
+1. **Texto Responsivo e Cobertura de Imagem:** Aprendi a lidar melhor com as mudanças bruscas de layouts horizontais e verticais entre dispositivos móveis e desktops. O uso de `object-fit: cover` garantiu que a imagem do card se adaptasse perfeitamente ao espaço disponível sem perder sua proporção original.
 
-2. **Internationalization & Flexible Heights**: I faced a critical layout challenge regarding text expansion (e.g., when a user translates the page). Instead of using rigid, fixed heights (`height: 100vh` or `height: 450px`), I applied fluid height methodologies so the containers expand naturally if the text grows.
+2. **Internacionalização e Alturas Flexíveis:** Enfrentei um desafio importante em relação à expansão de textos (por exemplo, quando o usuário traduz a página). Em vez de usar alturas fixas e rígidas (como `height: 100vh` ou `height: 450px`), utilizei abordagens fluídas para que os blocos de conteúdo e modais cresçam naturalmente caso a quantidade de texto mude.
 
 ```css
 .modal-success.active {
@@ -70,7 +56,7 @@ During this project, I improved my architectural CSS skills, responsive design p
 }
 ```
 
-3. **Clean Code & Event Management in JS**: I refactored my JavaScript code to apply the Single Responsibility Principle. I isolated DOM state updates into descriptive, standalone functions (`showSuccess`, `showError`, `clearError`) and hooked them into proper modern event listeners like `"input"`.
+3. **Código Limpo e Gerenciamento de Eventos no JS:** Refatorei meu código JavaScript para aplicar o Princípio de Responsabilidade Única. Separei as atualizações visuais do DOM em funções menores e bem descritivas (`showSuccess`, `showError`, `clearError`) e as associei a ouvintes de eventos modernos e de alta resposta como `"input"`.
 
 ```javascript
 form.addEventListener("submit", function (event) {
@@ -89,25 +75,26 @@ form.addEventListener("submit", function (event) {
 
 ---
 
-## Continued development
+## Próximos passos
 
-For my future projects, I want to keep focusing on:
+Nos próximos projetos, pretendo continuar focando em:
 
-- **CSS Architecture**: Refining folder structure divisions (like deeper comprehension of `/components` vs `/layouts`).
-- **Clean Code**: Continuing to practice modular JavaScript, ensuring code blocks are easily testable and clean.
-- **Accessibility (a11y)**: Enhancing focus management, screen-reader friendliness, and error states announcement.
+- **Arquitetura CSS:** Refinar a divisão de pastas de estilos (como compreender melhor quando modularizar códigos em `/components` vs `/layouts`).
+- **Código Limpo (Clean Code):** Continuar praticando a modularização e escrita de funções puras no JavaScript, facilitando a legibilidade e testes de código.
+- **Acessibilidade (a11y):** Melhorar o controle de foco de teclado, semântica para leitores de tela e a comunicação acessível de mensagens de erros no formulário.
 
 ---
 
-## AI Collaboration
+## Colaboração com IA (Gemini)
 
-I collaborated with Gemini as a supportive peer programming assistant to refine this project.
+Colaborei com o Gemini como um programador parceiro de apoio para lapidar a arquitetura deste projeto.
 
-- **How I used it**: Instead of asking for instant solutions, I used the AI to help me rethink my program logic when the form was accepting invalid values. It guided my thought process into properly handling function returns, variable state storage, and decoupling event loops.
-- **What worked well**: The prompt-guided learning style helped me fix my own bugs (like moving the dismiss action listener outside the submit form scope and switching from `keypress` to `input` event for fluid UX feedback).
+- **Como utilizei:** Em vez de pedir por soluções prontas ou respostas instantâneas, utilizei o modelo para repensar minha lógica quando o formulário estava aceitando valores inválidos. Ele guiou meus pensamentos para estruturar retornos de funções de forma limpa e separar as responsabilidades dos eventos.
+- **O que funcionou bem:** Esse modelo de aprendizagem ativa me ajudou a identificar e corrigir meus próprios bugs (como mover a escuta do clique de fechar o modal para fora do escopo de envio do formulário, e substituir o evento de `keypress` para o evento de `input` para um feedback visual muito mais fluido).
 
 ---
 
 ## Author
 
 - Frontend Mentor - [@mnyellison](https://www.frontendmentor.io/profile/mnyellison)
+- GitHub - [@mnyellison](https://github.com/mnyellison)
